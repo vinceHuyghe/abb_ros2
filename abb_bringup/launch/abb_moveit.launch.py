@@ -58,7 +58,7 @@ def launch_setup(context, *args, **kwargs):
                     f"{moveit_config_package.perform(context)}"
                 ),
                 "config",
-                "kinematics.yaml",
+                "trac_ik_kinematics.yaml",
             )
         )
         # MoveIt does not handle controller switching automatically
