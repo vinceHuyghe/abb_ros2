@@ -89,6 +89,15 @@ def launch_setup(context, *args, **kwargs):
                 "joint_limits.yaml",
             )
         )
+        .pilz_cartesian_limits(
+            file_path=os.path.join(
+                get_package_share_directory(
+                    f"{moveit_config_package.perform(context)}"
+                ),
+                "config",
+                "pilz_cartesian_limits.yaml",
+            )
+        )
         .to_moveit_configs()
     )
 
