@@ -137,15 +137,15 @@ def launch_setup(context, *args, **kwargs):
     )
 
     # Publish TF
-    robot_state_pub_node = Node(
-        package="robot_state_publisher",
-        executable="robot_state_publisher",
-        name="robot_state_publisher",
-        output="both",
-        parameters=[moveit_config.robot_description],
-    )
+    # robot_state_pub_node = Node(
+    #     package="robot_state_publisher",
+    #     executable="robot_state_publisher",
+    #     name="robot_state_publisher",
+    #     output="both",
+    #     parameters=[moveit_config.robot_description],
+    # )
 
-    nodes_to_start = [move_group_node, rviz_node, static_tf_node, robot_state_pub_node]
+    nodes_to_start = [move_group_node, rviz_node, static_tf_node] #, robot_state_pub_node]
     return nodes_to_start
 
 
